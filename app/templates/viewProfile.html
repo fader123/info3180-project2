@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div id = "profile">
+    
+    <div id = "profile-top">
+        <div id = "profile-left">
+            <img src="{{url_for('static', filename = "images/"+ user.profile_photo) }}"></img>
+        </div>
+        
+        <div id = "profile-mid">
+            <p id = profile-name>{{ user.firstname }} { {user.lastname }}</p>
+            <p class = "profile-details">{{ user.location }} <br> <h5> Member since </h5> {{user.joined_on }}</p>
+            <p class = "profile-details">{{ user.biography }}</p>
+        </div>
+        
+        <div id = "profile-right">
+            <p class = "right-details">{{ count_post }} <br> Posts</p>
+            <p class = "right-details">{{ count_follows }} <br> Followers</p>
+            
+            <form action="">
+                <button type="button" class="btn btn-primary">Follow</button>
+            </form>
+            
+        </div>
+    </div>
+    
+    <div id = "profile-bottom">
+        {% for p in post %}
+            <img src="{{url_for('static', filename = "images/"+ p.photo) }}"></img>
+        {% endfor %}
+    </div>
+            
+</div>
+
+{% endblock %}

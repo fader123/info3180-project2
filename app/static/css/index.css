@@ -1,0 +1,120 @@
+nav ul{
+    list-style: none;
+}
+
+#home-img{
+    width: 30em;
+    height: 20em;
+    position: absolute !important;
+    top: 30% !important; 
+    margin-left: 1em;
+    border-radius: 1em;
+}
+#app, body, html{
+    min-height: 100%;
+}
+.btn-inline{
+    display: inline-block;
+    margin-right: 1em;
+}
+#optionForm{
+    position: absolute;
+    background: white;
+    width: 25em;
+    padding: 1em;
+    height: 20em;
+    border-radius: 1em;
+    top: 30%;
+    right: 2em;
+}
+body{
+    background-color: #f0f4aa;
+}
+button{
+    min-width: 10em;
+}
+#regContent, #loginContent, #postContent{
+    margin-top: 1em;
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+#registerForm, #loginForm, #newPostForm{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60%;
+    margin-bottom: 2em;
+}
+#exp{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-10%, 0);
+    width: 100%;
+    margin-bottom: 2em;
+}
+#mk_post{
+    display: inline-block;
+    position: fixed;
+    margin-left: 1em;
+    min-width: 12em;
+    vertical-align: top;
+}
+#explorerView{
+    display: inline-block;
+}
+.card-title{
+    padding: 0.8em;
+}
+
+.card{
+    margin-bottom: 1.5em;
+}
+#profile-details{
+    margin: 3em;
+    width: 85%;
+    height: 10em;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+#profile-bio{
+    margin-top: 1em;
+}
+
+#profile-img, #profile-info, #profile-additional, .profile-snip{
+    display: inline-block;
+}
+#profile-img{
+    margin-right: 3em;
+}
+#profile-img img{
+    height: 3em;
+    width: 3em;
+}
+#profile-info{
+    padding-bottom: 1em;
+}
+#profile-uploads > img{
+    width: 30%;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+}
+#profile-uploads{
+    margin: 3em;
+    width: 88%;
+}
+.card-img-top{
+    max-height:25em;
+}
+.material img{
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+.likes-info{
+    display: inline-block;
+}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/addProfile.css') }}" type="text/css" />
+{% endblock %}
+
+{% block main %}
+
+    <div class="line-up">
+    <div id = "Title"><h1> Register </h1></div>
+  
+    <form method = 'POST' action= "{{url_for('register')}}" enctype="multipart/form-data" >
+        {{ form.csrf_token }}
+   
+       <div class="form-group">
+            {{ form.username.label}}
+            {{form.username (class = "form-control")}}
+        </div>
+        
+        <div class="form-group">
+            {{ form.password.label }} 
+            {{form.password (class = "form-control")}}
+        </div>
+        
+        <div class="form-group">
+            {{ form.firstname.label }} 
+            {{form.firstname (class = "form-control")}}
+        </div>
+        
+        <div class="form-group">
+           {{ form.lastname.label }}
+           {{form.lastname (class = "form-control")}}
+          </div>
+        
+        <div class="form-group">
+            {{ form.email.label }}
+            {{form.email (class = "form-control")}}
+        </div>
+        
+        <div class="form-group">
+            {{ form.location.label }}
+            {{form.location (class = "form-control")}}
+        </div>
+
+        <div class="form-group">
+            {{ form.biography.label }} 
+            {{form.biography (class="form-control")}}
+        </div>
+        
+        <div class="form-group">
+            {{ form.profilePhoto.label}} 
+            {{ form.profilePhoto (class="form-control")}}
+        </div>
+        
+        <button type = "Submit" class="btn btn-success" >Register</button>
+    </form>
+    </div>
+{% endblock %}

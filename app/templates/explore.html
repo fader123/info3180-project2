@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="outer-containment-box">
+    <div class="post-containment">
+        <div class="username">
+            {{user.username}}
+        </div>
+        <div class="userpost">
+            <img class="img-responsive" src=" {{url_for('static', filename= 'uploads/' + user.image)}}" height="250" width="250" alt = "image" >
+        </div>
+        
+       <div class="caption-containment">
+            {{user.caption]}}
+        </div>
+        
+        <div class="button-containment">
+            <div class="like-button">
+                <button>Like</button>
+            </div>
+        </div>
+       
+    </div>
+</div>
+{% endblock %}

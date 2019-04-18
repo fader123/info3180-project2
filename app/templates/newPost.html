@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="outside">
+  <div class="cont">
+   
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+      {{ form.csrf_token }}
+      
+      <div class="form-group">
+        {{ form.image.label }}
+        {{ form.image(class='form-control')}}
+      </div>
+      
+      <div class="form-group">
+        {{ form.caption.label }}
+        {{ form.caption(class='form-control', placeholder="Write a caption...") }}
+      </div>
+      
+      <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
